@@ -63,6 +63,9 @@ function loadQuiz() {
     c_text.innerText = currentQuizData.c;
     d_text.innerText = currentQuizData.d;
 }
+function rightanswers(){
+   alert('right answers: \n 1) All Hallows Eve \n 2) Ireland \n 3) Turnips \n 4) Trick or treat! \n 5) David Blaine  ')
+}
 
 function getSelected() {
     let answer = undefined;
@@ -94,36 +97,42 @@ submitBtn.addEventListener("click", () => {
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">I know you can do more </h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }else if(percent===40){
             quiz.innerHTML = `
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">Excellent dont give up </h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }else if(percent === 60){
             quiz.innerHTML = `
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">Woowyou such a smart guy </h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }else if(percent === 80){
             quiz.innerHTML = `
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">I never doubt of you GENUIS </h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }else if(percent === 100){
             quiz.innerHTML = `
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">Nothing to say , Are you alien?</h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }else{
             quiz.innerHTML = `
             <h2>You answered  ${percent}% questions correctly .</h2>   
             <h2 id="saying">its not bad</h2>          
             <button class="ReloadBtn" onclick="location.reload()">Reload</button>
+             <button class="answersBtn" onclick="rightanswers()">show answers</button>
         `;
            }
         }
